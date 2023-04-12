@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> FLIGHT DELAY PRECTION FOR AVIATION INDUSTRY</title>
+</head>
+
+<body bgcolor='black' text='white'>
+<h1>
+<b>
+<i>
+<font size=15>
+flight delay Prediction
+</font>
+</i>
+</b>
+</h1>
+<div style="background-color:white">
+<hr>
+<hr></div>
+<h2> Enter the details to check whether flight delay or not!</h2>
+<h4> 
+
+<form action="{{url_for('predict')}}" method="post">
+
+	<p> Enter the Flight Number : <input type='text' name='Flight Number' placeholder='Enter the Flight Number' Enter Numerical part required='required' />
+    <p> Month : <input type='text' name='Month' placeholder='Enter Month' Enter 0 for Male 1 for Female required='required' />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Marital Status : <input type='text' name='Married' placeholder='Enter 0 for no 1 for yes' required='required'/></p>
+    <p> Day of Month : <input type='text' name='day of Month' placeholder='Day of month' required='required' /></p>
+    <p> Origin : <input type='text' name='Origin' placeholder='Enter 0 for no 1 for yes' required='required' /></p>
+    <p>destination : <input type='text' name='destination ' placeholder='destination ' required='required' /></p>
+    <p> Scheduled Department Time : <input type='text' name='Scheduled Department Time' placeholder='Scheduled  Department Time' required='required' /></p>
+     <p> Scheduled Arrival Time : <input type='text' name='Scheduled Arrival Time' placeholder='Scheduled Arrival Time' required='required' /></p>
+    <p> Actual departure Time : <input type='text' name='Actual Departure Time' placeholder='Actual Departure Time ' required='required' /></p>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+</form>
+</h4>
+<h2>
+<b>
+{{ prediction_text }}
+</b>
+</h2>
+</body>
+</html>
